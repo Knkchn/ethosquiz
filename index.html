@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethOS Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen active">
+        <div class="container">
+            <div class="logo-container">
+                <img src="ethoslogo.jpg" alt="ethOS Logo" class="logo">
+            </div>
+            <h1>ethOS Knowledge Quiz</h1>
+            <div class="quiz-info">
+                <img src="ethoskart.jpeg" alt="ethOS Info" class="info-image">
+                <p>Test your knowledge about ethOS - the social and revenue-focused DeFi operating system on Ethereum!</p>
+                <div class="quiz-details">
+                    <div class="detail-item">
+                        <span class="icon">❓</span>
+                        <span>10 Random Questions</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="icon">⏱️</span>
+                        <span>10 Minutes Time Limit</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="icon">🎯</span>
+                        <span>Multiple Choice</span>
+                    </div>
+                </div>
+            </div>
+            <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            <div class="developer-credit">Developed by Knkchn</div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <div class="container">
+            <div class="quiz-header">
+                <div class="quiz-info-bar">
+                    <div class="question-counter">
+                        Question <span id="question-counter">1/10</span>
+                    </div>
+                    <div class="timer" id="timer">10:00</div>
+                    <div class="score">
+                        Score: <span id="current-score">0</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question-text">Question will appear here</h2>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be generated dynamically -->
+                </div>
+            </div>
+            
+            <div class="quiz-controls">
+                <button id="home-btn-quiz" class="btn btn-secondary">Home</button>
+                <button id="next-btn" class="btn btn-primary" disabled>Next Question</button>
+            </div>
+            <div class="developer-credit">Developed by Knkchn</div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="screen">
+        <div class="container">
+            <div class="result-container">
+                <div class="result-header">
+                    <img src="ethoslogo.jpg" alt="ethOS Logo" class="result-logo">
+                    <h1>Quiz Complete!</h1>
+                    <p id="result-message">Great job! You know ethOS well!</p>
+                </div>
+                
+                <div class="result-stats">
+                    <div class="stat-card">
+                        <div class="stat-value" id="final-score">8/10</div>
+                        <div class="stat-label">Final Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="correct-answers">8</div>
+                        <div class="stat-label">Correct</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="wrong-answers">2</div>
+                        <div class="stat-label">Wrong</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="accuracy-rate">80%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-time">5:30</div>
+                        <div class="stat-label">Time Taken</div>
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="share-btn" class="btn btn-share">Share on X</button>
+                    <button id="play-again-btn" class="btn btn-primary">Play Again</button>
+                    <button id="home-btn-gameover" class="btn btn-secondary">Home</button>
+                </div>
+            </div>
+            <div class="developer-credit">Developed by Knkchn</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
